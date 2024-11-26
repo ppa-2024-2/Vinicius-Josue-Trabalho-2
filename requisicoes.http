@@ -1,0 +1,33 @@
+##
+
+
+### Novo Aluno
+POST /api/v1/alunos HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "nome": "Marcio Torres",
+    "email": "marcio.torres@riogrande.ifrs.edu.br",
+    "cpf": "12345678901"
+}
+
+### GET ALL
+GET /api/v1/alunos HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+
+### GET Aluno por CPF
+GET /api/v1/alunos/1234567891 HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+
+### MATRICULAR ALUNO
+POST /api/v1/alunos/matricular HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "cpf": "11122233344",
+    "codigoTurma": "ppa-2024-2"
+}
